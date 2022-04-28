@@ -10,7 +10,7 @@ function get_all_node($code){
     preg_match_all("/Fetching node data from url '(.*)'/i",$code,$arr); 
     return $arr[1]; 
 }
-if (!empty($_GET['type']) && '1'===$_GET['type']){
+if (!empty($_GET['key']) && '1'===$_GET['key']){
     echo nl2br(file_get_contents("nodes.txt"));
 }else{
     $text = file_get_contents("result.txt");
